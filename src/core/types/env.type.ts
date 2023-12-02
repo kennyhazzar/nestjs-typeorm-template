@@ -5,7 +5,7 @@ export class CommonConfigs {
 export class DatabaseConfigs {
   type: string;
   host: string;
-  port: string;
+  port: number;
   username: string;
   password: string;
   name: string;
