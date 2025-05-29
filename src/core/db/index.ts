@@ -1,1 +1,1 @@
-export * from './base.db';
+export * from './entities';
