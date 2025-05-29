@@ -24,7 +24,7 @@ export const TypeormConfig: TypeOrmModuleAsyncOptions = {
       username,
       logging: configService.get('env.type') === 'development',
       entities: [join(__dirname, '../../', '/**/*.entity.{js,ts}')],
-      synchronize: true,
+      synchronize: false,
       autoLoadEntities: true,
     };
   },
