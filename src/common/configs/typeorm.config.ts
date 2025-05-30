@@ -1,6 +1,6 @@
 import { ConfigService, ConfigModule } from '@nestjs/config';
 import { TypeOrmModuleAsyncOptions } from '@nestjs/typeorm';
-import { DatabaseConfigs } from '../types';
+import { CommonConfigs, DatabaseConfigs } from '../types';
 import { join } from 'path';
 
 export const TypeormConfig: TypeOrmModuleAsyncOptions = {
@@ -15,6 +15,8 @@ export const TypeormConfig: TypeOrmModuleAsyncOptions = {
       name: database,
     } = configService.get<DatabaseConfigs>('db');
 
+    const { env } = configService.get<CommonConfigs>('common');
+
     return {
       type,
       database,
@@ -22,9 +24,9 @@ export const TypeormConfig: TypeOrmModuleAsyncOptions = {
       password,
       port,
       username,
-      logging: configService.get('env.type') === 'development',
+      logging: env === 'development',
       entities: [join(__dirname, '../../', '/**/*.entity.{js,ts}')],
-      synchronize: false,
+      synchronize: env === 'development',
       autoLoadEntities: true,
     };
   },

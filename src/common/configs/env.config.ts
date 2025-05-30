@@ -4,6 +4,7 @@ import { CommonConfigs, DatabaseConfigs } from '../types';
 
 const common = registerAs<CommonConfigs>('common', () => ({
   port: +process.env.PORT,
+  env: process.env.NODE_ENV,
 }));
 
 const database = registerAs<DatabaseConfigs>('db', () => ({
@@ -26,6 +27,7 @@ export const EnvConfig: ConfigModuleOptions = {
     DB_USERNAME: Joi.string().required(),
     DB_PASSWORD: Joi.string().required(),
     DB_NAME: Joi.string().required(),
+    NODE_ENV: Joi.string().required(),
   }),
   load: [common, database],
 };

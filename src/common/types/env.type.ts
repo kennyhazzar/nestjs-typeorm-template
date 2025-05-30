@@ -1,5 +1,6 @@
 export class CommonConfigs {
   port: number;
+  env: string;
 }
 
 export class DatabaseConfigs {
