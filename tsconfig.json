@@ -19,7 +19,7 @@
     "noFallthroughCasesInSwitch": false,
     "paths": {
       "@common/*": ["src/common/*"],
-      "@resources/*": ["src/resources/*"]
+      "@modules/*": ["src/modules/*"]
     }
   }
 }
