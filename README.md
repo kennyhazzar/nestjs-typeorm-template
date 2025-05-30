@@ -43,7 +43,7 @@ src/
 | Service   | Description                             | Port    |
 |-----------|-----------------------------------------|---------|
 | `app`     | Main NestJS API service                 | `3000`  |
-| `db`      | PostgreSQL 16 with volume + healthcheck | `5432`  |
+| `db`      | PostgreSQL 17 with volume + healthcheck | `5432`  |
 | `migrate` | One-shot service for running migrations | `—`     |
 
 ---
@@ -56,7 +56,6 @@ src/
 - ✅ `start.sh` and `migrate.sh` scripts
 - ✅ Removed `synchronize: true` for production safety
 - ✅ Swagger support via `@nestjs/swagger`
-- ✅ Renamed `core/` → `common/` for clarity
 - ✅ Clean `.env` support
 
 ---
