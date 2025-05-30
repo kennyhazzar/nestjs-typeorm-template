@@ -8,10 +8,10 @@ import {
 
 export abstract class BaseIncrementEntity {
   @ApiProperty({
-    description: 'Increment идентификатор',
+    description: 'Increment id',
     example: 1,
   })
-  @PrimaryGeneratedColumn('increment', { comment: 'Increment идентификатор' })
+  @PrimaryGeneratedColumn('increment', { comment: 'Increment id' })
   id: number;
 
   @CreatedAtColumn()

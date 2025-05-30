@@ -16,7 +16,7 @@ RUN yarn build
 # Stage 3: Final image
 FROM node:23-slim AS final
 
-# Устанавливаем PostgreSQL client для pg_isready
+# Install PostgreSQL client for pg_isready
 RUN apt-get update && apt-get install -y postgresql-client && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
