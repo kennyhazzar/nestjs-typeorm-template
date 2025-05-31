@@ -32,7 +32,7 @@ src/
 │       ├── entities/    # TypeORM entities
 │       ├── migrations/  # TypeORM migrations
 │       └── data-source.ts
-├── resources/           # Feature modules
+├── modules/           # Feature modules
 ├── main.ts              # App entry point
 ```
 
